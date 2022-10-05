@@ -1,7 +1,7 @@
 # Unimake.Wkhtmltopdf
 
-Este projeto implementa uma versão mais simplificada da biblioteca https://github.com/fpanaccia/Wkhtmltopdf.NetCore para converter html em pdf, apenas para windows.<br/>
-Obrigado [fpanaccia](https://github.com/fpanaccia) por compartilhar a versão completa para .NET<br/>
+Este projeto implementa uma versão mais simplificada da biblioteca https://github.com/fpanaccia/Wkhtmltopdf.NetCore para converter html em pdf, apenas para windows.  
+Obrigado [fpanaccia](https://github.com/fpanaccia) por compartilhar a versão completa para .NET  
 Utiliza o projeto https://wkhtmltopdf.org/ para a conversão.
 
 # Como utilizar
@@ -16,14 +16,14 @@ Os arquivos da biblioteca [Wkhtmltopdf](https://wkhtmltopdf.org/) devem estar di
         |   |     ├── win-x64 <<-- Este diretório é obrigatório
         |   |     |   ├── wkhtmltopdf.exe
         |   |     |   └── wkhtmltox.dll
-Para baixar as versões utilizadas na biblioteca, baixe em:<br/>
-[wkhtmltopdf.exe](https://github.com/Unimake/Unimake.Wkhtmltopdf/raw/main/source/Unimake.Wkhtmltopdf/Wkhtmltox/win-x64/wkhtmltopdf.exe) <br/>
+Para baixar as versões utilizadas na biblioteca, baixe em:  
+[wkhtmltopdf.exe](https://github.com/Unimake/Unimake.Wkhtmltopdf/raw/main/source/Unimake.Wkhtmltopdf/Wkhtmltox/win-x64/wkhtmltopdf.exe)   
 [wkhtmltox.dll](https://github.com/Unimake/Unimake.Wkhtmltopdf/raw/main/source/Unimake.Wkhtmltopdf/Wkhtmltox/win-x64/wkhtmltox.dll)
 
 Para baixar versões mais atuais: https://wkhtmltopdf.org/downloads.html
 
-Estes arquivos devem ser incluídos na sua solução e marcados como "Copy Always" para serem copiados para o diretório de build.<br/>
-Se publicados em um servidor web, os mesmos deverão ser enviados juntamente com o pacote de distribuição. <br/>
+Estes arquivos devem ser incluídos na sua solução e marcados como "Copy Always" para serem copiados para o diretório de build.  
+Se publicados em um servidor web, os mesmos deverão ser enviados juntamente com o pacote de distribuição.   
 **O diretório "win-x64" é obrigatório**
 
 Esta estrutrura de arquivos, é a estrutrua padrão desta biblioteca, caso queira mudar, passe a configuração através das opções definidas em [ConvertOptions.WkhtmltoxPath](https://github.com/Unimake/Unimake.Wkhtmltopdf/blob/99c60c1ab58b7bd493f09062f05a4b1ebe2acbda/source/Unimake.Wkhtmltopdf/ConvertOptions.cs#L20)
