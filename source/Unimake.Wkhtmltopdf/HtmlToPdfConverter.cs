@@ -44,7 +44,7 @@ namespace Unimake.Wkhtmltopdf
         /// </summary>
         /// <param name="html">html para conversão</param>
         /// <returns></returns>
-        public byte[] GetPDFAsByteArray(string html) => WkhtmlDriver.Convert(WkhtmltopdfConfiguration.WkhtmltoxPath, _convertOptions.GetConvertOptions(), html);
+        public byte[] GetPDFAsByteArray(string html) => WkhtmlDriver.Convert(_convertOptions.WkhtmltoxPath, _convertOptions.GetConvertOptions(), html);
 
         /// <summary>
         /// Faz a leitura do html pelo arquivo e retorna uma string em base64

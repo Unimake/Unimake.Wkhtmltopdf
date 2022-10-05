@@ -14,6 +14,11 @@ namespace Unimake.Wkhtmltopdf
     {
         #region Private Methods
 
+        /// <summary>
+        /// Relative path to the directory containing wkhtmltopdf executable. Default is "wkhtmltox". 
+        /// </summary>
+        public string WkhtmltoxPath { get; set; } = "wkhtmltox";
+
         private string GetConvertBaseOptions()
         {
             var result = new StringBuilder();
