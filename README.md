@@ -101,4 +101,4 @@ public void GetPDFAsBase64()
 }
 ```
 
-Veja outoros exemplos de uso em [Unimake.Wkhtmltopdf.Test](https://github.com/Unimake/Unimake.Wkhtmltopdf/tree/main/source/Unimake.Wkhtmltopdf.Test)
+Veja outros exemplos de uso em [Unimake.Wkhtmltopdf.Test](https://github.com/Unimake/Unimake.Wkhtmltopdf/tree/main/source/Unimake.Wkhtmltopdf.Test)
