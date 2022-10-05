@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Company>Unimake Software</Company>
+		<Copyright>Unimake Software 2022 ©</Copyright>
+		<PackageProjectUrl>https://github.com/Unimake/Unimake.Wkhtmltopdf</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/Unimake/Unimake.Wkhtmltopdf</RepositoryUrl>
+		<PackageTags>unimake;wkhtmltopdf;pdf;html to pdf;html</PackageTags>
+		<AssemblyVersion>2022.10.05.1155</AssemblyVersion>
+		<Version>20221005.1155.33</Version>
+		<FileVersion>$(AssemblyVersion)</FileVersion>
+		<Authors>Unimake Software</Authors>
+		<RootNamespace>Unimake.Wkhtmltopdf</RootNamespace>
+		<Description>Conversor de HTML para PDF com base no projeto wkhtmltopdf</Description>
+		<ApplicationIcon>unimake.ico</ApplicationIcon>
+		<PackageIcon>unimake.png</PackageIcon>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<PackageId>Unimake.Wkhtmltopdf</PackageId>
+		<Title>Unimake.Wkhtmltopdf</Title>
+		<Product>Unimake.Wkhtmltopdf</Product>
+	</PropertyGroup>
+	<ItemGroup>
+		<Content Include="unimake.ico" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Update="Wkhtmltox\win-x64\wkhtmltopdf.exe">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Wkhtmltox\win-x64\wkhtmltox.dll">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="..\..\resources\image\unimake.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+	</ItemGroup>
+</Project>
