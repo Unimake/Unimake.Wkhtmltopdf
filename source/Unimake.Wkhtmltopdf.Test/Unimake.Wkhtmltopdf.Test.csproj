@@ -25,4 +25,13 @@
     <ProjectReference Include="..\Unimake.Wkhtmltopdf\Unimake.Wkhtmltopdf.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="libs\MyLibFolder\win-x64\wkhtmltopdf.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="libs\MyLibFolder\win-x64\wkhtmltox.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

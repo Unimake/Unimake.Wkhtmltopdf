@@ -7,6 +7,35 @@ namespace Unimake.Wkhtmltopdf.Test
         #region Public Methods
 
         [Fact]
+        public void AnotherWkhtmltopdfLibFolder()
+        {
+            var html = HTMLHelper.ToHtml();
+            var options = new ConvertOptions
+            {
+                WkhtmltoxPath = "libs\\MyLibFolder"
+            };
+
+            var bytes = new HtmlToPdfConverter(options).GetPDFAsByteArray(html);
+            Assert.NotNull(bytes);
+
+            var fi = new FileInfo("test.pdf");
+
+            if(fi.Exists)
+            {
+                fi.Delete();
+            }
+
+            File.WriteAllBytes(fi.FullName, bytes);
+
+            //Open pdf file
+            _ = Process.Start(new ProcessStartInfo
+            {
+                UseShellExecute = true,
+                FileName = fi.FullName
+            });
+        }
+
+        [Fact]
         public void GetPDFAsBase64()
         {
             var html = HTMLHelper.ToHtml();

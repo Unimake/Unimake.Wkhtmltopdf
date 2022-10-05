@@ -7,8 +7,8 @@
 		<PackageProjectUrl>https://github.com/Unimake/Unimake.Wkhtmltopdf</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/Unimake/Unimake.Wkhtmltopdf</RepositoryUrl>
 		<PackageTags>unimake;wkhtmltopdf;pdf;html to pdf;html</PackageTags>
-		<AssemblyVersion>2022.10.05.1155</AssemblyVersion>
-		<Version>20221005.1155.33</Version>
+		<AssemblyVersion>2022.10.05.1536</AssemblyVersion>
+		<Version>20221005.1536.42</Version>
 		<FileVersion>$(AssemblyVersion)</FileVersion>
 		<Authors>Unimake Software</Authors>
 		<RootNamespace>Unimake.Wkhtmltopdf</RootNamespace>

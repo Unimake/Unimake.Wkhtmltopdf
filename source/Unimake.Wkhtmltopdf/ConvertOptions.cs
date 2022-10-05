@@ -14,11 +14,6 @@ namespace Unimake.Wkhtmltopdf
     {
         #region Private Methods
 
-        /// <summary>
-        /// Relative path to the directory containing wkhtmltopdf executable. Default is "wkhtmltox". 
-        /// </summary>
-        public string WkhtmltoxPath { get; set; } = "wkhtmltox";
-
         private string GetConvertBaseOptions()
         {
             var result = new StringBuilder();
@@ -160,6 +155,11 @@ namespace Unimake.Wkhtmltopdf
         /// <remarks>Replaces [name] with value in header and footer (repeatable).</remarks>
         [OptionFlag("--replace")]
         public Dictionary<string, string> Replacements { get; set; }
+
+        /// <summary>
+        /// Relative path to the directory containing wkhtmltopdf executable. Default is "wkhtmltox".
+        /// </summary>
+        public string WkhtmltoxPath { get; set; } = "wkhtmltox";
 
         #endregion Public Properties
 

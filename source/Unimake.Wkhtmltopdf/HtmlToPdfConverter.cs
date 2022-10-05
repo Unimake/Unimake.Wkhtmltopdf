@@ -113,7 +113,11 @@ namespace Unimake.Wkhtmltopdf
         /// </summary>
         /// <param name="convertOptions">Opções de conversão</param>
         /// <exception cref="ArgumentNullException">lançada se as opções forem nulas. Se desejar limpar as opções use <see cref="ConvertOptions.Default"/></exception>
-        public void SetConvertOptions(ConvertOptions convertOptions) => _convertOptions = convertOptions ?? throw new ArgumentNullException(nameof(convertOptions));
+        public HtmlToPdfConverter SetConvertOptions(ConvertOptions convertOptions)
+        {
+            _convertOptions = convertOptions ?? throw new ArgumentNullException(nameof(convertOptions));
+            return this;
+        }
 
         #endregion Public Methods
     }
