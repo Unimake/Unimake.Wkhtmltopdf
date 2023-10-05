@@ -43,13 +43,13 @@ namespace Unimake.Wkhtmltopdf
         /// <summary>
         /// Converts given URL or HTML string to PDF.
         /// </summary>
-        /// <param name="wkhtmlPath">Path to wkthmltopdf\wkthmltoimage.</param>
+        /// <param name="wkhtmlFullPath">Path to wkthmltopdf\wkthmltoimage.</param>
         /// <param name="switches">Switches that will be passed to wkhtmltopdf binary.</param>
         /// <param name="html">String containing HTML code that should be converted to PDF.</param>
         /// <returns>PDF as byte array.</returns>
-        public static byte[] Convert(string wkhtmlPath, string switches, string html)
+        public static byte[] Convert(string wkhtmlFullPath, string switches, string html)
         {
-            var fi = new FileInfo(Path.Combine(wkhtmlPath, "win-x64", "wkhtmltopdf.exe"));
+            var fi = new FileInfo(wkhtmlFullPath);
 
             if(!fi.Exists)
             {

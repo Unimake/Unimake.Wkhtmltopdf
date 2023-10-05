@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using Unimake.Wkhtmltopdf.Enumerations;
@@ -12,6 +13,12 @@ namespace Unimake.Wkhtmltopdf
     /// </summary>
     public sealed class ConvertOptions
     {
+        #region Private Fields
+
+        private string _wkhtmltoxFullPath;
+
+        #endregion Private Fields
+
         #region Private Methods
 
         private string GetConvertBaseOptions()
@@ -157,9 +164,28 @@ namespace Unimake.Wkhtmltopdf
         public Dictionary<string, string> Replacements { get; set; }
 
         /// <summary>
+        /// Define de executable filename to wkhtmltopdf. Default is: "wkhtmltopdf.exe"
+        /// </summary>
+        public string WkhtmltoxExecutableFilename { get; set; } = "wkhtmltopdf.exe";
+
+        /// <summary>
+        /// This is the full executable path of wkhtmltopdf. The default is the combination of <see cref="WkhtmltoxPath"/> / <see cref="WkhtmltoxSubDirectory"/> / <see cref="WkhtmltoxExecutableFilename"/>
+        /// </summary>
+        public string WkhtmltoxFullPath
+        {
+            get => string.IsNullOrWhiteSpace(_wkhtmltoxFullPath) ? Path.Combine(WkhtmltoxPath, WkhtmltoxSubDirectory, WkhtmltoxExecutableFilename) : _wkhtmltoxFullPath;
+            set => _wkhtmltoxFullPath = value;
+        }
+
+        /// <summary>
         /// Relative path to the directory containing wkhtmltopdf executable. Default is "wkhtmltox".
         /// </summary>
         public string WkhtmltoxPath { get; set; } = "wkhtmltox";
+
+        /// <summary>
+        /// Relative path to the directory <see cref="WkhtmltoxPath"/>. Default is "win-x64"
+        /// </summary>
+        public string WkhtmltoxSubDirectory { get; set; } = "win-x64";
 
         #endregion Public Properties
 

@@ -12,7 +12,9 @@ namespace Unimake.Wkhtmltopdf.Test
             var html = HTMLHelper.ToHtml();
             var options = new ConvertOptions
             {
-                WkhtmltoxPath = "libs\\MyLibFolder"
+                WkhtmltoxPath = "libs\\MyLibFolder",
+                WkhtmltoxSubDirectory = "win",
+                WkhtmltoxExecutableFilename = "htmltopdf.exe"
             };
 
             var bytes = new HtmlToPdfConverter(options).GetPDFAsByteArray(html);
